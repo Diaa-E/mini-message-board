@@ -6,6 +6,14 @@
     <title>Mini Message Board</title>
 </head>
 <body>
-    
+    <ul>
+        <% messages.forEach(message => {%>
+            <li>
+                <p><%= message.user %></p>
+                <p><%= message.added %></p>
+                <p><%= message.text %></p>
+            </li>
+        <%});%>
+    </ul>
 </body>
 </html>
