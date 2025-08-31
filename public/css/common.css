@@ -1,8 +1,37 @@
 :root{
     --bg: #E8D4B7;
+    --bg-container: #e7e7e7 ;
+    --text-dark: #1b1b1b;
+    --text-light: #ededed ;
+    --primary: #934790;
+    --primary-hover: #6A0066;
+    --border: solid 1px var(--text-dark);
+    --shadow: 3px 3px var(--text-dark) ;
 }
 
 body{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    min-height: 90dvh;
+    gap: 50px;
+}
+
+button{
+    cursor: pointer;
+}
+
+.button-primary{
+    border-radius: 5px;
+    background-color: var(--primary);
+    color: var(--text-light);
+    padding: 5px 20px;
+    text-decoration: none;
+    border: var(--border);
+    font-size: 1rem;
+}
+
+.button-primary:hover{
+    background-color: var(--primary-hover);
+    box-shadow: var(--shadow);
 }

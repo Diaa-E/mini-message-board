@@ -1,3 +1,36 @@
 body{
     background-color: var(--bg);
 }
+
+.new-form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--bg-container);
+    padding: 20px 30px;
+    border-radius: 5px;
+    border: var(--border);
+}
+
+.new-form:focus-within{
+    box-shadow: var(--shadow);
+}
+
+.form-row{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-box{
+    background-color: var(--text-light);
+    border-radius: 5px;
+    border: var(--border);
+    padding: 5px;
+    font-size: 1rem;
+}
+
+.text-box:focus{
+    outline: solid 2px var(--primary);
+}

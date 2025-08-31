@@ -9,15 +9,20 @@
 </head>
 <body>
     <h1>Add a new Message</h1>
-    <a href="./">Home</a>
-    <form action="/new" method="POST">
-        <label for="message">Message</label>
-        <input type="text" required id="message" name="message">
+    <a class="button-primary" href="./">Home</a>
+    <form class="new-form" action="/new" method="POST">
 
-        <label for="user">User</label>
-        <input type="text" required id="user"  name="user">
+        <div class="form-row">
+            <label for="user">User Name</label>
+            <input class="text-box" type="text" required id="user"  name="user">
+        </div>
 
-        <button type="submit">Send</button>
+        <div class="form-row">
+            <label for="message">Message</label>
+            <input class="text-box" type="text" required id="message" name="message">
+        </div>
+
+        <button class="button-primary" type="submit">Send</button>
     </form>
 </body>
 </html>
