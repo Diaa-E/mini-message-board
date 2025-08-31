@@ -1,0 +1,8 @@
+:root{
+    --bg: #E8D4B7;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
