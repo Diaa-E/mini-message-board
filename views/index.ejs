@@ -9,13 +9,13 @@
 </head>
 <body>
     <h1>Mini MEssage Board</h1>
-    <a href="./new">Add a new Message</a>
-    <ul>
+    <a class="button-primary" href="./new">Add a new Message</a>
+    <ul class="message-list">
         <% messages.forEach(message => {%>
-            <li>
-                <p><%= message.user %></p>
+            <li class="message-container">
+                <p class="user-name"><%= message.user %></p>
                 <p><%= message.added %></p>
-                <p><%= message.text %></p>
+                <p class="message-text"><%= message.text %></p>
             </li>
         <%});%>
     </ul>

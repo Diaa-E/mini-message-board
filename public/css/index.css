@@ -1,3 +1,31 @@
 body{
     background-color: var(--bg);
 }
+
+.message-list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.message-container{
+    background-color: var(--bg-container);
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: var(--border);
+}
+
+.message-container:hover{
+    box-shadow: var(--shadow);
+}
+
+.user-name{
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
+.message-text{
+    color: var(--text-dark);
+    font-size: 1rem;
+}
