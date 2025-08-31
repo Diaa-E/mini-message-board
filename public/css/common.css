@@ -16,7 +16,8 @@
     --bg: #E8D4B7;
     --bg-container: #e7e7e7 ;
     --text-dark: #1b1b1b;
-    --text-light: #ededed ;
+    --text-light: #ededed;
+    --text-grey: #5a5a5a;
     --primary: #934790;
     --primary-hover: #6A0066;
     --border: solid 1px var(--text-dark);
