@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "title";
+    src: url("../assets/fonts/aurach_tri.ttf");
+}
+
 :root{
     --bg: #E8D4B7;
     --bg-container: #e7e7e7 ;
@@ -7,6 +12,8 @@
     --primary-hover: #6A0066;
     --border: solid 1px var(--text-dark);
     --shadow: 3px 3px var(--text-dark) ;
+
+    --font-title: "title", sans-serif;
 }
 
 body{
@@ -34,4 +41,11 @@ button{
 .button-primary:hover{
     background-color: var(--primary-hover);
     box-shadow: var(--shadow);
+}
+
+.page-title{
+    font-family: var(--font-title);
+    color: var(--text-dark);
+    font-size: 3rem;
+    font-weight: normal;
 }
