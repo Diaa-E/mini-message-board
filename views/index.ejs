@@ -12,11 +12,7 @@
     <a class="button-primary" href="./new">Add a new Message</a>
     <ul class="message-list">
         <% messages.forEach(message => {%>
-            <li class="message-container">
-                <p class="user-name"><%= message.user %></p>
-                <p><%= message.added %></p>
-                <p class="message-text"><%= message.text %></p>
-            </li>
+            <%- include("components/message", { message: message }) %>
         <%});%>
     </ul>
 </body>
