@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import path from "node:path";
 import __dirname from "./__dirname.js";
 import indexRouter from "./routes/indexRouter.js";
+import newRouter from "./routes/newRouter.js";
 
 dotenv.config();
 
@@ -13,6 +14,7 @@ app.set("view engine", "ejs");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")))
+app.use("/new", newRouter);
 app.use("/", indexRouter);
 app.use((err, req, res, next) => {
 
