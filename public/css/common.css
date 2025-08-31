@@ -3,6 +3,15 @@
     src: url("../assets/fonts/aurach_tri.ttf");
 }
 
+@font-face {
+    font-family: "default";
+    src: url("../assets/fonts/DMSans-VariableFont_opsz\,wght.ttf");
+}
+
+*{
+    font-family: var(--font-default);
+}
+
 :root{
     --bg: #E8D4B7;
     --bg-container: #e7e7e7 ;
@@ -14,6 +23,7 @@
     --shadow: 3px 3px var(--text-dark) ;
 
     --font-title: "title", sans-serif;
+    --font-default: "default", arial;
 }
 
 body{
@@ -45,7 +55,7 @@ button{
 
 .page-title{
     font-family: var(--font-title);
-    color: var(--text-dark);
+    color: var(--primary);
     font-size: 3rem;
     font-weight: normal;
 }
