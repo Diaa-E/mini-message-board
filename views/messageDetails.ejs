@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message from <%= message.user %></title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/messageDetails.css">
+</head>
+<body>
+    <h1 class="page-title">Message Details</h1>
+    <a class="button-primary" href="./">Home</a>
+    <a class="button-primary" href="./new">Add a new Message</a>
+    <div class="message-container">
+        <p class="user-name"><%= message.user %></p>
+        <p class="message-text"><%= message.text %></p>
+        <p class="date"><%= message.added %></p>
+    </div>
+</body>
+</html>

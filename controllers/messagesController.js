@@ -27,8 +27,23 @@ async function addNewMessage(req, res)
     res.redirect("/");
 }
 
+async function getMessageById(req, res)
+{
+    const { id } = req.params;
+
+    const message = await messagesDB.getMessageById(id);
+
+    if (!message)
+    {
+        throw new CustomNotFoundError("Message not Found");
+    }
+
+    res.render("messageDetails", { message: message });
+}
+
 export {
 
     getAllMessages,
-    addNewMessage
+    addNewMessage,
+    getMessageById
 };

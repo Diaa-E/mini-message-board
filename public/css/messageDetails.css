@@ -1,0 +1,27 @@
+body{
+    background-color: var(--bg);
+}
+
+.message-container{
+    background-color: var(--bg-container);
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: var(--border);
+    min-width: 500px;
+}
+
+.user-name{
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
+.message-text{
+    color: var(--text-dark);
+    font-size: 1rem;
+}
+
+.date{
+    font-style: italic;
+    font-size: .8rem;
+    color: var(--text-grey);
+}
