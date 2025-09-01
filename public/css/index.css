@@ -12,11 +12,15 @@ body{
 }
 
 .message-container{
+    display: flex;
     background-color: var(--bg-container);
     padding: 10px 20px;
     border-radius: 5px;
     border: var(--border);
-    min-width: 500px;
+    min-width: 700px;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
 }
 
 .message-container:hover{
@@ -26,11 +30,19 @@ body{
 .user-name{
     color: var(--primary);
     font-size: 1.2rem;
+    width: 100px;
+    max-width: 70px;
+    word-wrap: break-word;
 }
 
 .message-text{
     color: var(--text-dark);
     font-size: 1rem;
+    width: 300px;
+    max-width: 300px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: no-wrap;
 }
 
 .date{
