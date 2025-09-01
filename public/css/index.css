@@ -16,6 +16,7 @@ body{
     padding: 10px 20px;
     border-radius: 5px;
     border: var(--border);
+    min-width: 500px;
 }
 
 .message-container:hover{
