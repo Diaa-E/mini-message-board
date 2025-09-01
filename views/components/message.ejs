@@ -2,5 +2,5 @@
     <p class="user-name"><%= message.user %></p>
     <p class="message-text"><%= message.text %></p>
     <p class="date"><%= convertMs(Math.abs(message.now - message.added)) %> ago</p>
-    <a class="button-primary button-link" href="./<%= message.id %>">Details</a>
+    <a class="button-primary button-link" href="./<%= message.id %>">Open</a>
 </li>
