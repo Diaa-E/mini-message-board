@@ -49,4 +49,5 @@ body{
     font-style: italic;
     font-size: .8rem;
     color: var(--text-grey);
+    width: 100px;
 }
