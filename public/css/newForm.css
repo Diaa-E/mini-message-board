@@ -29,6 +29,8 @@ body{
     border: var(--border);
     padding: 5px;
     font-size: 1rem;
+    resize: none;
+    width: 250px;
 }
 
 .text-box:focus{
