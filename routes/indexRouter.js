@@ -6,7 +6,7 @@ const indexRouter = Router();
 
 indexRouter.get("/", getAllMessages)
 .get("/:id", getMessageById)
-.get("/{*splat}", (req, res) => {
+.route("/{*splat}", (req, res) => {
 
     throw new CustomNotFoundError("Page Not Found");
 });
