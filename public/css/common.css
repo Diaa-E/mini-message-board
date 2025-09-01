@@ -10,6 +10,7 @@
 
 *{
     font-family: var(--font-default);
+    box-sizing: border-box;
 }
 
 :root{
