@@ -13,7 +13,7 @@
     <ul class="message-list">
         <% const now = new Date();
         messages.forEach((message) => {%>
-            <%- include("components/message", { message: { ...message, now: now } }) %>
+            <%- include("components/message", { message: { ...message, now: now }, convertMs: convertMs }) %>
         <%});%>
     </ul>
 </body>

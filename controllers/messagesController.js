@@ -1,5 +1,6 @@
 import CustomNotFoundError from "../error/customNotFoundError.js";
 import messagesDB from "../models/messagesDB.js";
+import { convertMs } from "../utils/timeConverter.js";
 
 async function getAllMessages(req, res)
 {
@@ -10,7 +11,7 @@ async function getAllMessages(req, res)
         throw new CustomNotFoundError("No Messages Available.");
     }
 
-    res.render("index", { messages: messages });
+    res.render("index", { messages: messages, convertMs: convertMs });
 }
 
 async function addNewMessage(req, res)

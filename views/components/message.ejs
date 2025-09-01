@@ -1,5 +1,5 @@
 <li class="message-container">
     <p class="user-name"><%= message.user %></p>
     <p class="message-text"><%= message.text %></p>
-    <p class="date"><%= Math.abs(message.now - message.added) %> mS ago</p>
+    <p class="date"><%= convertMs(Math.abs(message.now - message.added)) %> ago</p>
 </li>
