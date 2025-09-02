@@ -9,7 +9,8 @@
     <link rel="shortcut icon" href="./assets/images/favicon.svg" type="svg">
 </head>
 <body>
-    <h1 class="page-title">Mini Message Board</h1>
+    <%- include("components/header") %>
+    <h1 class="page-title">All Messages</h1>
     <a class="button-primary button-link" href="./new">Add a new Message</a>
     <ul class="message-list">
         <% const now = new Date();
