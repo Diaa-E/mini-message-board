@@ -1,0 +1,13 @@
+body{
+    background-color: var(--bg);
+}
+
+.error-title{
+    font-family: var(--font-title);
+    color: var(--danger);
+}
+
+.error-message{
+    font-family: var(--font-default);
+    color: var(--danger);
+}

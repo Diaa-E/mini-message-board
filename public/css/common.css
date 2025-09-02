@@ -23,6 +23,7 @@
     --text-grey: #5a5a5a;
     --primary: #934790;
     --primary-hover: #6A0066;
+    --danger: #FF0066;
     --border: solid 1px var(--text-dark);
     --shadow: 3px 3px var(--text-dark) ;
 

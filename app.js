@@ -19,7 +19,7 @@ app.use("/", indexRouter);
 app.use((err, req, res, next) => {
 
     console.error(err);
-    res.status(err.statusCode || 500).send(err.message);
+    res.status(err.statusCode || 500).render("error", { statusCode: err.statusCode || 500, message: err.message });
 });
 
 const PORT = process.env.PORT || 3000;
