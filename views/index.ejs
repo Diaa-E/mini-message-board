@@ -10,14 +10,16 @@
 </head>
 <body>
     <%- include("components/header") %>
-    <h1 class="page-title">All Messages</h1>
-    <a class="button-primary button-link" href="./new">Add a new Message</a>
-    <ul class="message-list">
-        <% const now = new Date();
-        messages.forEach((message) => {%>
-            <%- include("components/message", { message: { ...message, now: now }, convertMs: convertMs }) %>
-        <%});%>
-    </ul>
+    <div class="content">
+        <h2 class="page-title">All Messages</h2>
+        <a class="button-primary button-link" href="./new">Add a new Message</a>
+        <ul class="message-list">
+            <% const now = new Date();
+            messages.forEach((message) => {%>
+                <%- include("components/message", { message: { ...message, now: now }, convertMs: convertMs }) %>
+            <%});%>
+        </ul>
+    </div>
     <%- include("components/footer") %>
 </body>
 </html>
