@@ -126,3 +126,10 @@ button{
     place-items: center;
     place-content: center;
 }
+
+@media (max-width: 700px) {
+    
+    .footer{
+        flex-direction: column;
+    }
+}

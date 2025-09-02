@@ -9,7 +9,7 @@ body{
     padding: 10px 20px;
     border-radius: 5px;
     border: var(--border);
-    min-width: 700px;
+    width: 80dvw;
     gap: 20px;
 }
 
@@ -21,8 +21,7 @@ body{
 .message-text{
     color: var(--text-dark);
     font-size: 1rem;
-    width: 600px;
-    max-width: 600px;
+    max-width: 80dvw;
     text-wrap: wrap;
     word-wrap: break-word;
 }
