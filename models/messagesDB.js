@@ -4,70 +4,78 @@ const messages = [
     {
         text: "Hey! Are you free this weekend?",
         user: "Bruce",
-        added: new Date(),
+        added: generateRandomDate(),
         id: uuid()
     },
     {
         text: "Guess what? I aced my exam!",
         user: "Clark",
-        added: new Date(),
+        added: generateRandomDate(),
         id: uuid()
     },
     {   
         text: "Just having one of those days, you know? Let's grab coffee and talk it out.",
         user: "Diana",
-        added: new Date(),
+        added: generateRandomDate(),
         id: uuid()
     },
     {
         text: "This is 🔥! Thank you!",
         user: "John",
-        added: new Date(),
+        added: generateRandomDate(),
         id: uuid()
     },
     {
         text: "Don't worry, we all have those stories. It's what makes life interesting!",
         user: "Christine",
-        added: new Date(),
+        added: generateRandomDate(),
         id: uuid()
     },
     {
         text: "Just saw your favorite band is coming to town! We have to get tickets ASAP!",
         user: "Joanna",
-        added: new Date(),
+        added: generateRandomDate(),
         id: uuid()
     },
     {
         text: "How was your day?",
         user: "Bruce",
-        added: new Date(),
+        added: generateRandomDate(),
         id: uuid()
     },
     {
         text: "I'm on it. Front row seats, here we come!",
         user: "Peter",
-        added: new Date(),
+        added: generateRandomDate(),
         id: uuid()
     },
     {
         text: "Great, how was yours?",
         user: "Clark",
-        added: new Date(),
+        added: generateRandomDate(),
         id: uuid()
     },
     {
         text: "Need some advice. Can we chat?",
         user: "Miranda",
-        added: new Date(),
+        added: generateRandomDate(),
         id: uuid()
     },
     {
         text: "Guess who I bumped into today?",
         user: "Diana",
-        added: new Date(),
+        added: generateRandomDate(),
         id: uuid()
     }
 ];
+
+function generateRandomDate()
+{
+    const lowerMs = (new Date("2025-01-01")).getTime();
+    const upperMs = (new Date()).getTime();
+
+    return new Date(Math.floor((Math.random() * (upperMs - lowerMs))) + lowerMs);
+}
 
 async function getAllMessages()
 {
