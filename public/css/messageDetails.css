@@ -3,11 +3,14 @@ body{
 }
 
 .message-container{
+    display: flex;
+    flex-direction: column;
     background-color: var(--bg-container);
     padding: 10px 20px;
     border-radius: 5px;
     border: var(--border);
     min-width: 700px;
+    gap: 20px;
 }
 
 .user-name{
@@ -28,4 +31,6 @@ body{
     font-style: italic;
     font-size: .8rem;
     color: var(--text-grey);
+    margin-top: 20px;
+    text-align: right;
 }
