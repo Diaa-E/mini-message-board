@@ -79,7 +79,7 @@ function generateRandomDate()
 
 async function getAllMessages()
 {
-    return [...messages];
+    return [...messages].sort((a, b) => a.added > b.added ? 1 : -1);
 }
 
 async function addNewMessage(message, user, date)
