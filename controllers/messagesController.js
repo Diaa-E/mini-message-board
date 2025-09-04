@@ -1,6 +1,7 @@
 import CustomNotFoundError from "../error/customNotFoundError.js";
 import messagesDB from "../models/messagesDB.js";
 import { convertMs } from "../utils/timeConverter.js";
+import { body, validationResult } from "express-validator";
 
 async function getAllMessages(req, res)
 {
