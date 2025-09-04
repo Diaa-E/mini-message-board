@@ -5,7 +5,7 @@ const newRouter = Router();
 
 newRouter.get("/", (req, res) => {
 
-    res.render("newForm");
+    res.render("newForm", { errors: [] });
 })
 .post("/", addNewMessage);
 

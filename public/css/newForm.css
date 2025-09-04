@@ -37,6 +37,18 @@ body{
     outline: solid 2px var(--primary);
 }
 
+.error-list{
+    list-style: none;
+}
+
+.error-message{
+    color: var(--danger);
+    font-family: var(--font-default);
+    text-wrap: wrap;
+    word-wrap: break-word;
+    max-width: 90%;
+}
+
 @media (max-width: 700px){
     
     .text-box{

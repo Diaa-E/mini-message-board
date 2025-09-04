@@ -15,19 +15,6 @@ async function getAllMessages(req, res)
     res.render("index", { messages: messages, convertMs: convertMs });
 }
 
-async function addNewMessage(req, res)
-{
-    const { user, message } = req.body;
-
-    if (!user || !message)
-    {
-        throw new Error();
-    }
-
-    await messagesDB.addNewMessage(message, user, new Date());
-    res.redirect("/");
-}
-
 async function getMessageById(req, res)
 {
     const { id } = req.params;
@@ -41,6 +28,40 @@ async function getMessageById(req, res)
 
     res.render("messageDetails", { message: message });
 }
+
+async function addNewMessageHandler(req, res)
+{
+    const errors = validationResult(req);
+
+    if (!errors.isEmpty())
+    {
+        return res.status(400).render("newForm", { errors: errors.array() });
+    }
+
+    const { user, message } = req.body;
+
+    if (!user || !message)
+    {
+        throw new Error();
+    }
+
+    await messagesDB.addNewMessage(message, user, new Date());
+    res.redirect("/");
+}
+
+const validateNewMEssage = [
+
+    body("user").trim().notEmpty()
+    .isAlpha().withMessage(`Sender must contain only letters.`)
+    .isLength({ min: 2, max: 15 }).withMessage("Sender must be between 2 and 15 characters in length."),
+    body("message").trim().notEmpty()
+];
+
+const addNewMessage = [
+
+    validateNewMEssage,
+    addNewMessageHandler,
+]
 
 export {
 
